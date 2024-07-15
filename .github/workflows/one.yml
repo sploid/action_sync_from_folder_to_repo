@@ -18,10 +18,13 @@ jobs:
         with:
           repository: libgit2/libgit2
           path: libgit2
-
       - name: Build libgit2
         uses: threeal/cmake-action@main
         with:
           source-dir: libgit2
           build-dir: libgit2/build
+      - name: Build luagit2
+        run: |
+          luarocks install https://raw.github.com/libgit2/luagit2/master/lua-git2-scm-0.rockspec GIT2_DIR=libgit2/build
+          luarocks make
           
