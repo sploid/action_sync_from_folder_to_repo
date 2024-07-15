@@ -27,6 +27,6 @@ jobs:
       - name: Build luagit2
         run: |
           ls -la libgit2/include
-          luarocks install https://raw.github.com/libgit2/luagit2/master/lua-git2-scm-0.rockspec GIT2_INCDIR=libgit2/include
+          luarocks install https://raw.github.com/libgit2/luagit2/master/lua-git2-scm-0.rockspec GIT2_INCDIR=$GITHUB_WORKSPACE/libgit2/include
           luarocks make
           
