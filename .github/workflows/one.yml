@@ -23,7 +23,7 @@ jobs:
         with:
           source-dir: libgit2
           build-dir: libgit2/build
-          fetch-tags: v0.17.0
+          ref: v0.17.0
       - name: Build luagit2
         run: |
           ls -la libgit2/include
