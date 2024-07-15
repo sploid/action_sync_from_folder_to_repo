@@ -14,4 +14,14 @@ jobs:
         with:
           luaVersion: "5.1.5"
       - uses: leafo/gh-actions-luarocks@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: git@github.com:libgit2/libgit2.git
+          path: libgit2
+
+      - name: Build libgit2
+        uses: threeal/cmake-action@main
+        with:
+          source-dir: libgit2
+          build-dir: libgit2/build
           
