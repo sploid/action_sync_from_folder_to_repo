@@ -18,12 +18,12 @@ jobs:
         with:
           repository: libgit2/libgit2
           path: libgit2
+          ref: v0.17.0
       - name: Build libgit2
         uses: threeal/cmake-action@main
         with:
           source-dir: libgit2
           build-dir: libgit2/build
-          ref: v0.17.0
       - name: Build luagit2
         run: |
           ls -la libgit2/include
