@@ -28,6 +28,6 @@ jobs:
           ls -la libgit2
           ls -la libgit2/build
           ls -la libgit2/build/include
-          luarocks install https://raw.github.com/libgit2/luagit2/master/lua-git2-scm-0.rockspec GIT2_DIR=libgit2/build
+          luarocks install https://raw.github.com/libgit2/luagit2/master/lua-git2-scm-0.rockspec GIT2_DIR=libgit2
           luarocks make
           
